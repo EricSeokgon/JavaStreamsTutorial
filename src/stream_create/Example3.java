@@ -7,12 +7,8 @@ import java.util.stream.Stream;
  */
 public class Example3 {
     public static void main(String[] args) {
-        Stream<String> stream  = Stream.<String>builder()
-                .add("XML")
-                .add("Java")
-                .add("CSS")
-                .add("SQL")
-                .build();
+        String[] names = {"XML", "Java", "SQL", "CSS"};
+        Stream<String> stream = Stream.of(names);
         stream.forEach(System.out::println);
     }
 }
