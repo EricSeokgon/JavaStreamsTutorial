@@ -9,10 +9,13 @@ import java.util.List;
  * Created by hadeslee on 2017-11-25.
  */
 public class Employee {
+
     public static enum Gender {
         MALE, FEMALE
     }
+
     private long id;
+
     private String name;
     private Gender gender;
     private LocalDate dob;
@@ -25,6 +28,14 @@ public class Employee {
         this.gender = gender;
         this.dob = dob;
         this.income = income;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Gender getGender() {
@@ -42,6 +53,7 @@ public class Employee {
     public void setGender(Gender gender) {
         this.gender = gender;
     }
+
     public double getIncome() {
         return income;
     }
