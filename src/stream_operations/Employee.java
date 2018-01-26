@@ -10,6 +10,10 @@ import java.util.List;
  */
 public class Employee {
 
+    public long getId() {
+        return id;
+    }
+
     public static enum Gender {
         MALE, FEMALE
     }
