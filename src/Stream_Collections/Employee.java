@@ -6,6 +6,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Employee {
+    public Gender getGender() {
+        return gender;
+    }
     public static enum Gender {
         MALE, FEMALE
     }
@@ -26,6 +29,9 @@ public class Employee {
     }
     public String getName() {
         return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
     public static List<Employee> persons() {
         Employee p1 = new Employee(1, "Jake", Gender.MALE, LocalDate.of(1971,
