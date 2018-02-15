@@ -14,6 +14,10 @@ public class Employee {
         return id;
     }
 
+    public LocalDate getDob() {
+        return dob;
+    }
+
     public static enum Gender {
         MALE, FEMALE
     }
