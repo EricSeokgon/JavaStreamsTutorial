@@ -9,6 +9,11 @@ public class Employee {
     public Gender getGender() {
         return gender;
     }
+
+    public static <T> double getIncome(T t) {
+        return 0;
+    }
+
     public static enum Gender {
         MALE, FEMALE
     }
