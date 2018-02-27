@@ -14,6 +14,10 @@ public class Employee {
         return 0;
     }
 
+    public LocalDate getDob() {
+        return dob;
+    }
+
     public static enum Gender {
         MALE, FEMALE
     }
@@ -32,12 +36,18 @@ public class Employee {
         this.dob = dob;
         this.income = income;
     }
+    public boolean isMale(Employee employee) {
+        return this.gender == Gender.MALE;
+    }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public static List<Employee> persons() {
         Employee p1 = new Employee(1, "Jake", Gender.MALE, LocalDate.of(1971,
                 Month.JANUARY, 1), 2343.0);
