@@ -1,6 +1,7 @@
 package Stream_Grouping;
 
-import Stream_Collections.Employee;
+
+import stream_operations.Employee;
 
 import java.util.List;
 import java.util.Map;

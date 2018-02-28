@@ -6,18 +6,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Employee {
-    public Gender getGender() {
-        return gender;
-    }
-
-    public static <T> double getIncome(T t) {
-        return 0;
-    }
-
-    public LocalDate getDob() {
-        return dob;
-    }
-
     public static enum Gender {
         MALE, FEMALE
     }
@@ -36,16 +24,13 @@ public class Employee {
         this.dob = dob;
         this.income = income;
     }
-    public boolean isMale(Employee employee) {
-        return this.gender == Gender.MALE;
-    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public boolean isMale() {
+        return this.gender == Gender.MALE;
     }
 
     public static List<Employee> persons() {
@@ -65,5 +50,12 @@ public class Employee {
         List<Employee> persons = Arrays.asList(p1, p2, p3, p4, p5, p6);
 
         return persons;
+    }
+
+    @Override
+    public String toString() {
+        String str = String.format("(%s, %s,  %s,  %s,  %.2f)\n", id, name, gender,
+                dob, income);
+        return str;
     }
 }
